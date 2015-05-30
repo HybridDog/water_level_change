@@ -110,7 +110,6 @@ local function level_water(pos)
 end
 
 -- change water heights with abm
--- water regenerates too fast…
 minetest.register_abm({
 	nodenames = {"default:water_source"},
 	neighbors = {"air", "default:water_flowing"},
