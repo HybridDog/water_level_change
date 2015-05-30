@@ -3,7 +3,7 @@ local load_time_start = os.clock()
 
 
 local time = math.floor(tonumber(os.clock()-load_time_start)*100+0.5)/100
-local msg = "[] loaded after ca. "..time
+local msg = "[water_level_change] loaded after ca. "..time
 if time > 0.05 then
 	print(msg)
 else
