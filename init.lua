@@ -2,6 +2,7 @@ local load_time_start = os.clock()
 
 -- water levels which belong to sea
 local levels = {}
+--load_levels()
 
 local newlevel
 -- increases water height from pos
@@ -67,10 +68,8 @@ end
 
 -- not every water source should be changeable
 local function water_changeable(pos)
-	if minetest.get_node(pos).name ~= "default:water_source" then
-		return false
-	end
-	if minetest.find_node_near(pos, 1, {"air", "default:water_flowing"}) then
+	if minetest.get_node(pos).name == "default:water_source"
+	and minetest.find_node_near(pos, 1, {"air", "default:water_flowing"}) then
 		return true
 	end
 	return false
